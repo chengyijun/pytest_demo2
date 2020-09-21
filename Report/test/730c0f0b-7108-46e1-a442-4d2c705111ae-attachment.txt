@@ -1,0 +1,4 @@
+
+Succeed to connect redis:6379
+
+Succeed to close redis:6379
