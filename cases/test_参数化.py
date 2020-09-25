@@ -10,6 +10,7 @@ def test_passwd_length(passwd):
     assert len(passwd) >= 8
 
 
+@pytest.mark.skip
 @pytest.mark.parametrize('user, passwd',
                          [('jack', 'abcdefgh'),
                           ('tom', 'a123456a')])
@@ -22,3 +23,10 @@ def test_passwd_md5(user, passwd):
     import hashlib
 
     assert hashlib.md5(passwd.encode()).hexdigest() == db[user]
+
+
+@pytest.mark.parametrize('name',
+                         ['abel'])
+def test_csh(name):
+    print(name)
+    assert len(name) >= 2

@@ -1,3 +1,0 @@
-Connection successful
-111
-Connection closed

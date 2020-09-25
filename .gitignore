@@ -1,5 +1,7 @@
-.pytest_cache/
-report.html
 .idea/
 __pycache__
 assets/
+.pytest_cache/
+report/
+result/
+*.png
