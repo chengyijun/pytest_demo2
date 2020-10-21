@@ -1,3 +1,5 @@
+import os
+
 import allure
 import pytest
 
@@ -56,3 +58,14 @@ class TestShoppingTrolley:
 @allure.step('用户登录')
 def login(user, pwd):
     print(user, pwd)
+
+
+def main():
+    # allure generate ./result -o ./report --clean 生成报告的命令
+    root = os.path.dirname(os.getcwd())
+    os.system(rf"pytest {root}/cases/test_allure2.py --alluredir {root}/result/")
+    os.system(rf"allure generate {root}/result -o {root}/report --clean")
+
+
+if __name__ == '__main__':
+    main()
